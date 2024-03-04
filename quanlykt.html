@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý kỳ thi</title>
+    <link rel="stylesheet" href="quanlyktstyles.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="container">
+            <h1>Quản lý danh sách kỳ thi</h1>
+            <div class="form">
+                <input type="text" id="examName" placeholder="Nhập tên kỳ thi">
+                <input type="date" id="examDate">
+                <input type="number" id="examParticipants" placeholder="Số lượng thí sinh">
+                <button onclick="addExam()">Thêm mới</button>
+            </div>
+            <table id="examTable">
+                <thead>
+                    <tr>
+                        <th>Tên kỳ thi</th>
+                        <th>Ngày thi</th>
+                        <th>Số lượng thí sinh</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="examList">
+                    <!-- Danh sách kỳ thi sẽ được hiển thị ở đây -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="quanlyktscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg.jpeg'); /* Set the background image */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Đặt vị trí tương đối để lớp overlay có thể được đặt tuyệt đối theo body */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Đặt lớp overlay ở giữa màn hình */
+    transform: translateX(-50%); /* Di chuyển lớp overlay sang trái 50% chiều rộng của nó */
+    width: 60%; /* Chiều rộng của lớp overlay */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng với độ trong suốt */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px; /* Add padding to create space around the container */
+    background-color: #fff; /* Set background color to white */
+    border-radius: 10px; /* Add rounded corners to the container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow to the container */
+}
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    margin-bottom: 20px; /* Add spacing at the bottom of the form */
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form input[type="number"] {
+    padding: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
