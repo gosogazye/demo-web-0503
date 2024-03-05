@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang thống kê</title>
+    <link rel="stylesheet" href="thongke.css">
+</head>
+<body>
+    <main class = "content">
+        <div class = "container">
+            <h1>BÁO CÁO THỐNG KÊ</h1>
+
+            <div class = "loc">
+                    <!-- <label for="exam-filter">Loc theo ky thi</label> -->
+                    <label>Kỳ thi: </label>
+                    <select class="filterItem" id="exam-filter">
+                        <option value="all">Tất cả</option>
+                        <option value="Cuối kì">Cuối kì</option>
+                        <option value="Giữa kì">Giữa kì</option>
+                        <option value="Đầu kì">Đầu kì</option>
+                        <option value="Khảo sát">Khảo sát</option>
+                        <option value="Kỳ hè">Kỳ hè</option>
+                        <option value="Kỳ phụ">Kỳ phụ</option>
+    
+                    </select>
+                    <label>Tháng: </label>
+                    <select class="filterItem" id="exam-filter1">
+                        <option value="all">Tất cả</option>
+                        <option value="01">một</option>
+                        <option value="02">hai</option>
+                        <option value="03">ba</option>
+                        <option value="04">bốn</option>
+                        <option value="05">năm</option>
+                        <option value="06">sáu</option>
+                        <option value="07">bảy</option>
+                        <option value="08">tám</option>
+                        <option value="09">chín</option>
+                        <option value="10">mười</option>
+                        <option value="11">mười một</option>
+                        <option value="12">mười hai</option>        
+                    </select>
+                    <!-- <label class="filterItem" for="sDate" >Từ ngày:</label>
+                    <input type="date" id="sDate">
+                    <label class="filterItem" for="eDate">Đến ngày:</label>
+                    <input type="date" id="eDate">-->
+                    <button class="filterItem" id="filter-btn" onclick="filterData()">Lọc</button>
+            </div>
+            <div class = "thongke">
+                <div class="block">
+                    <h2>Tổng số lần tham gia</h1>
+                    <h2 id="total-participation"></h2>
+                </div>
+                <div class="block">
+                    <h2>Tỉ lệ hoàn thành</h1>
+                    <h2 id="total-participation1"></h2>
+                </div>
+                <div class="block">
+                    <h2>Điểm trung bình</h1>
+                    <h2 id="total-participation2"></h2>
+                </div>
+            </div>
+
+            <div class = "row1">
+                <canvas id="myChart" style="width:100%;max-width:1200px"></canvas>
+            </div>
+
+            <table id="table">
+                <h2 id = "label-student-table">Danh sách tất cả sinh viên</h2>
+                <thead>
+                    <tr>
+                        <th>MSV</th>
+                        <th>Họ và tên</th>
+                        <th>Kỳ thi</th>
+                        <th>Ngày thi</th>
+                        <th>Điểm</th>
+                    </tr>
+                </thead>
+                <tbody id="student-body">
+                    <!-- Data will be dynamically added here using JavaScript -->
+                </tbody>
+            </table>
+
+            <div class = "xuatFile">
+                <button id="export-btn-pdf" onclick="exportToPDF()">Xuất file PDF</button>
+                    <!-- <button id="export-btn-excel" onclick="exportToExcel()">Xuất file Excel</button> -->
+            </div>
+
+            <div class="xemKQ">
+                <button onclick="redirectToResultPage()">Trang Xem Kết Quả</button>
+            </div>
+            
+            <script>
+                function redirectToResultPage() {
+                    window.location.href = 'result.html';
+                }
+            </script>
+            
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="thongke.js"></script>
+</body>
+</html>

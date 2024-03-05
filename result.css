@@ -1,0 +1,47 @@
+body {
+    background-image: url("background.jpg");
+    font-family: Arial, sans-serif;
+}
+
+#search-container {
+    margin-bottom: 20px;
+}
+body h1{
+    display: block;
+    margin : 30px;
+}
+.container {
+    height: 100%; /* Độ cao của container */
+    width: 80%;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /*margin: 0 10px;*/
+    background-color: #ffffff;
+    text-align: center;
+    max-width: 1200px; /* Độ rộng tối đa của container */
+    margin: 0 auto; /
+}
+caption {
+    font-size: 20px;
+    font-weight: bold;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: rgb(255, 207, 207);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding:20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

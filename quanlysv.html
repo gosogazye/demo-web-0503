@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý thông tin sinh viên</title>
+    <link rel="stylesheet" href="quanlysvstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý thông tin sinh viên</h1>
+        <form id="student-form">
+            <label for="student-name">Tên sinh viên:</label>
+            <input type="text" id="student-name" name="student-name" required>
+            <label for="student-id">Mã sinh viên:</label>
+            <input type="text" id="student-id" name="student-id" required>
+            <button type="submit">Thêm mới</button>
+        </form>
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Số thứ tự</th>
+                    <th>Tên sinh viên</th>
+                    <th>Mã sinh viên</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="student-list">
+                <!-- Danh sách sinh viên sẽ được hiển thị ở đây -->
+            </tbody>
+        </table>
+    </div>
+    <script src="quanlysvscript.js"></script>
+</body>
+</html>
