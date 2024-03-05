@@ -1,5 +1,5 @@
 body {
-    background-image: url('bg.jpeg'); /* Đường dẫn tới hình ảnh nền */
+    background-image: url('background.jpg'); /* Đường dẫn tới hình ảnh nền */
     background-size: cover; /* Đảm bảo hình ảnh sẽ được hiển thị đầy đủ trên màn hình */
     background-position: center; /* Căn giữa hình ảnh */
     background-repeat: no-repeat; /* Không lặp lại hình ảnh */
@@ -55,4 +55,19 @@ body {
     padding: 8px 16px;
     text-decoration: none;
     margin: 0 2px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #f5f5f5;
 }

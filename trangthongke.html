@@ -5,24 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang thống kê</title>
     <link rel="stylesheet" href="thongke.css">
-    <style>
-        /* CSS cho bảng */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-    </style>
 </head>
 <body>
     <main class = "content">
@@ -34,29 +16,29 @@
                     <label>Kỳ thi: </label>
                     <select class="filterItem" id="exam-filter">
                         <option value="all">Tất cả</option>
-                        <option value="ex1">Cuối kì</option>
-                        <option value="ex2">Giữa kì</option>
-                        <option value="ex3">Đầu kì</option>
-                        <option value="ex4">Khảo sát</option>
-                        <option value="ex5">Kỳ hè</option>
-                        <option value="ex6">Kỳ phụ</option>
+                        <option value="Cuối kì">Cuối kì</option>
+                        <option value="Giữa kì">Giữa kì</option>
+                        <option value="Đầu kì">Đầu kì</option>
+                        <option value="Khảo sát">Khảo sát</option>
+                        <option value="Kỳ hè">Kỳ hè</option>
+                        <option value="Kỳ phụ">Kỳ phụ</option>
     
                     </select>
                     <label>Tháng: </label>
-                    <select class="filterItem" id="exam-filter">
+                    <select class="filterItem" id="exam-filter1">
                         <option value="all">Tất cả</option>
-                        <option value="t1">một</option>
-                        <option value="t2">hai</option>
-                        <option value="t3">ba</option>
-                        <option value="t4">bốn</option>
-                        <option value="t5">năm</option>
-                        <option value="t6">sáu</option>
-                        <option value="t7">bảy</option>
-                        <option value="t8">tám</option>
-                        <option value="t9">chín</option>
-                        <option value="t10">mười</option>
-                        <option value="t11">mười một</option>
-                        <option value="t12">mười hai</option>        
+                        <option value="01">một</option>
+                        <option value="02">hai</option>
+                        <option value="03">ba</option>
+                        <option value="04">bốn</option>
+                        <option value="05">năm</option>
+                        <option value="06">sáu</option>
+                        <option value="07">bảy</option>
+                        <option value="08">tám</option>
+                        <option value="09">chín</option>
+                        <option value="10">mười</option>
+                        <option value="11">mười một</option>
+                        <option value="12">mười hai</option>        
                     </select>
                     <!-- <label class="filterItem" for="sDate" >Từ ngày:</label>
                     <input type="date" id="sDate">
@@ -67,15 +49,15 @@
             <div class = "thongke">
                 <div class="block">
                     <h2>Tổng số lần tham gia</h1>
-                    <h2>154230</h2>
+                    <h2 id="total-participation"></h2>
                 </div>
                 <div class="block">
                     <h2>Tỉ lệ hoàn thành</h1>
-                    <h2>95%</h2>
+                    <h2 id="total-participation1"></h2>
                 </div>
                 <div class="block">
                     <h2>Điểm trung bình</h1>
-                    <h2>7.25</h2>
+                    <h2 id="total-participation2"></h2>
                 </div>
             </div>
 
@@ -83,98 +65,37 @@
                 <canvas id="myChart" style="width:100%;max-width:1200px"></canvas>
             </div>
 
-            <div class = "table">
-                <h2>Bảng thống kê sinh viên</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>MSV</th>
-                                <th>Họ và tên</th>
-                                <th>Kỳ thi</th>
-                                <th>Ngày thi</th>
-                                <th>Điểm</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>B21DCCN501</td>
-                                <td>Nguyễn Văn Phong</td>
-                                <td>Cuối kì</td>
-                                <td>2/3/2024</td>
-                                <td>9.5</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN112</td>
-                                <td>Trần Thu Hà</td>
-                                <td>Cuối kì</td>
-                                <td>2/3/2024</td>
-                                <td>8.5</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN007</td>
-                                <td>Nguyễn Văn Anh</td>
-                                <td>Cuối kì</td>
-                                <td>2/3/2024</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN601</td>
-                                <td>Nguyễn Văn Phong</td>
-                                <td>Giữa kì</td>
-                                <td>2/1/2024</td>
-                                <td>6.5</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN211</td>
-                                <td>Đỗ Thị Dung</td>
-                                <td>Giữa kì</td>
-                                <td>2/1/2024</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN301</td>
-                                <td>Đặng Tuấn Dũng</td>
-                                <td>Giữa kì</td>
-                                <td>2/1/2024</td>
-                                <td>5.5</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN421</td>
-                                <td>Trần Minh Nhật</td>
-                                <td>Giữa kì</td>
-                                <td>2/1/2024</td>
-                                <td>8</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN741</td>
-                                <td>Phạm Văn Quân</td>
-                                <td>Kỳ phụ</td>
-                                <td>22/12/2023</td>
-                                <td>6.5</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN761</td>
-                                <td>Đinh Thị Mai Thủy</td>
-                                <td>Kỳ phụ</td>
-                                <td>22/12/2023</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>B21DCCN741</td>
-                                <td>Hoàng Thị Yến</td>
-                                <td>Khảo sát</td>
-                                <td>38/7/2023</td>
-                                <td>8</td>
-                            </tr>
-                            <!-- Thêm dữ liệu khác nếu cần -->
-                        </tbody>
-                    </table>
-            </div>
+            <table id="table">
+                <h2 id = "label-student-table">Danh sách tất cả sinh viên</h2>
+                <thead>
+                    <tr>
+                        <th>MSV</th>
+                        <th>Họ và tên</th>
+                        <th>Kỳ thi</th>
+                        <th>Ngày thi</th>
+                        <th>Điểm</th>
+                    </tr>
+                </thead>
+                <tbody id="student-body">
+                    <!-- Data will be dynamically added here using JavaScript -->
+                </tbody>
+            </table>
 
             <div class = "xuatFile">
                 <button id="export-btn-pdf" onclick="exportToPDF()">Xuất file PDF</button>
                     <!-- <button id="export-btn-excel" onclick="exportToExcel()">Xuất file Excel</button> -->
             </div>
+
+            <div class="xemKQ">
+                <button onclick="redirectToResultPage()">Trang Xem Kết Quả</button>
+            </div>
+            
+            <script>
+                function redirectToResultPage() {
+                    window.location.href = 'result.html';
+                }
+            </script>
+            
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
